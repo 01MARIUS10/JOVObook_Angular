@@ -1,0 +1,13 @@
+.public-container{
+     height: 100%;
+    position:relative;
+    // background: url(../../../assets/logo.jpg);
+    background: darkred;
+}
+img{
+    margin:auto;
+    position:absolute;
+    left:50%;
+    transform: translateX(-50%);
+    height: inherit;
+}

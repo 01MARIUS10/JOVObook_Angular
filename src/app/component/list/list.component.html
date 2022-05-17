@@ -1,0 +1,26 @@
+<div class="list-container">
+    <div class="add">
+        <input type="text" #name placeholder="#your name" [value]="person.name"
+        (input)="addName(name.value)">
+        <input type="number" #age placeholder="#your age" [value]="person.age"
+        (input)="addAge(age.value)">
+        <input type="text" #adress placeholder="#your adress" [value]="person.adress" 
+        (input)="addAdress(adress.value)"> 
+    </div>
+    <app-button class="addbutton" (click)="addTheNewPerson()"  [color]="boutonaddlistcolor" [text]="boutonaddlisttext"></app-button>
+
+    <ul>
+        <li *ngFor="let member of listsOfPerson">
+            <tr class="element-list">
+                <td>{{member.name}}  </td>
+                <td>{{member.age}}   </td>
+                <td>{{member.adress}}</td>
+            </tr>
+
+            
+            <p class="delbutton"><app-button (giveID)="deltolist($event)" [IDbutton]="member.ID" [color]="boutondellistcolor" [text]="boutondellisttext" ></app-button>
+</p>
+        </li>
+    </ul>
+    
+</div>

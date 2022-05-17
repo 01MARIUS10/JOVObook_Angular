@@ -1,0 +1,8 @@
+.app-container{
+    display: grid;
+    grid-template-rows: 139px 1fr 119px;
+    height: 100vh;
+}
+section>*{
+    height: 100%;
+}

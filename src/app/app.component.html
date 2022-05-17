@@ -1,0 +1,15 @@
+<div class="app-container">
+    <app-header (login)="goLogin()"></app-header>
+    
+    <section >
+        <!-- <app-list *ngIf="isLogin ;else bg"></app-list>
+        <ng-template #bg >
+            <app-img-section ></app-img-section>
+        </ng-template> -->
+        <router-outlet></router-outlet>
+    </section>
+   
+    <app-footer></app-footer>
+    
+</div>
+

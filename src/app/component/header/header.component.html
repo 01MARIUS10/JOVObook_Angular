@@ -1,0 +1,15 @@
+<div class="header-container">
+    <h1>JOVObook</h1>
+    <ul *ngIf="correct">
+        <li><a routerLink="/">Home</a></li>
+        <li><a routerLink="/message">Message</a></li>
+        <li><a routerLink="/profil">Profil</a></li>
+        <li><a routerLink="/other">Other</a></li>
+    </ul>
+    
+    <input #idabouttext type="password" name="texte" id="texte" placeholder="#JOVO_password"
+    [hidden]="correct"
+    (input)="taketext(idabouttext.value)">
+    
+    <app-button (click)="changedisplay()"  [color]="boutoncolor" [text]="boutontext"></app-button>
+</div>
